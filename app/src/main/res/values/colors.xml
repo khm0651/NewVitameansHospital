@@ -9,4 +9,5 @@
     <color name="white">#FFFFFFFF</color>
 
     <color name="my_blood_layout_background_color">#ffffff</color>
+    <color name="my_blood_button_text_color">#ffffff</color>
 </resources>
