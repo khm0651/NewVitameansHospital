@@ -6,16 +6,31 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import com.example.newvitameanshospital.R
+import com.example.newvitameanshospital.databinding.FragmentMainBinding
+import com.example.newvitameanshospital.ui.weight.WeightFragment
 
 
 class MainFrag : Fragment() {
+
+    lateinit var binding: FragmentMainBinding
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?,
     ): View? {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_main, container, false)
+        binding = FragmentMainBinding.inflate(inflater, container, false)
+        return binding.root
+    }
+
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        super.onViewCreated(view, savedInstanceState)
+        val weightFrag = WeightFragment()
+        val manager = childFragmentManager
+        val transaction = manager.beginTransaction()
+        transaction.add(R.id.weight_frag,weightFrag,weightFrag.javaClass.name)
+        transaction.commit()
+
     }
 
 
