@@ -14,5 +14,4 @@ class BloodFrag: Fragment() {
         binding = FragmentBloodBinding.inflate(inflater,container,false)
         return binding.root
     }
-
 }
