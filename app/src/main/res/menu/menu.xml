@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <item
+        android:id="@+id/ic_bell"
+        android:icon="@drawable/ic_bell"
+        android:title="알림"
+        app:showAsAction="always" />
+
+    <item
+        android:id="@+id/ic_calendar"
+        android:icon="@drawable/ic_calendar"
+        android:title="달력"
+        app:showAsAction="always"
+        />
+
+</menu>
