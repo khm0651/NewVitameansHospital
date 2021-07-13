@@ -42,6 +42,7 @@ class WeightFragment : Fragment() {
             chart.description.isEnabled = false
             chart.setPinchZoom(false)
             chart.setDrawGridBackground(false)
+            chart.isDoubleTapToZoomEnabled = false
 
             var legend = chart.legend
             legend.isEnabled = false
