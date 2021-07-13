@@ -101,5 +101,11 @@ class WeightFragment : Fragment() {
             data.barWidth = 0.6f
             chartview.data = data
         }
+
+
+
+
+
+
     }
 }
