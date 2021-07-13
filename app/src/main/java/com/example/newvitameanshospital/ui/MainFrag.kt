@@ -30,10 +30,8 @@ class MainFrag : Fragment() {
         val bloodFrag = BloodFrag()
         val manager = childFragmentManager
         val transaction = manager.beginTransaction()
-        transaction.add(R.id.blood_pressure_sugar_frag,bloodFrag,bloodFrag.javaClass.name)
-        transaction.add(R.id.weight_frag,weightFrag,weightFrag.javaClass.name)
+        transaction.add(R.id.blood_pressure_sugar_frag, bloodFrag, bloodFrag.javaClass.name)
+        transaction.add(R.id.weight_frag, weightFrag, weightFrag.javaClass.name)
         transaction.commit()
     }
-
 }
-
