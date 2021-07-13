@@ -7,6 +7,7 @@ import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import com.example.newvitameanshospital.R
 import com.example.newvitameanshospital.databinding.FragmentMainBinding
+import com.example.newvitameanshospital.ui.myblood.BloodFrag
 import com.example.newvitameanshospital.ui.weight.WeightFragment
 
 class MainFrag : Fragment() {
@@ -26,9 +27,13 @@ class MainFrag : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         val weightFrag = WeightFragment()
+        val bloodFrag = BloodFrag()
         val manager = childFragmentManager
         val transaction = manager.beginTransaction()
-        transaction.add(R.id.weight_frag, weightFrag, weightFrag.javaClass.name)
+        transaction.add(R.id.blood_pressure_sugar_frag,bloodFrag,bloodFrag.javaClass.name)
+        transaction.add(R.id.weight_frag,weightFrag,weightFrag.javaClass.name)
         transaction.commit()
     }
+
 }
+
