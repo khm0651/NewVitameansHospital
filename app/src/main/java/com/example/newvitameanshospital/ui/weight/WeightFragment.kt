@@ -12,8 +12,11 @@ import com.github.mikephil.charting.components.XAxis
 import com.github.mikephil.charting.data.BarData
 import com.github.mikephil.charting.data.BarDataSet
 import com.github.mikephil.charting.data.BarEntry
+import com.github.mikephil.charting.data.Entry
+import com.github.mikephil.charting.formatter.IValueFormatter
 import com.github.mikephil.charting.formatter.ValueFormatter
 import com.github.mikephil.charting.interfaces.datasets.IBarDataSet
+import com.github.mikephil.charting.utils.ViewPortHandler
 
 class WeightFragment : Fragment() {
     lateinit var binding: FragmentWeightBinding
@@ -52,8 +55,8 @@ class WeightFragment : Fragment() {
             xAxis.setDrawGridLines(false)
             xAxis.labelCount = 7
             xAxis.valueFormatter = object : ValueFormatter() {
-                override fun getFormattedValue(value: Float, axis: AxisBase?): String {
-                    return value.toString()
+                override fun getFormattedValue(value: Float): String {
+                    return value.toInt().toString()
                 }
             }
 

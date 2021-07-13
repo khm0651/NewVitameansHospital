@@ -145,7 +145,7 @@
             android:layout_width="0dp"
             android:layout_height="55dp"
             android:layout_marginTop="10dp"
-            android:background="@drawable/all_radius_fill_drak_grey"
+            android:background="@drawable/my_blood_button_background"
             app:layout_constraintTop_toBottomOf="@id/content_wrapper"
             app:layout_constraintLeft_toLeftOf="parent"
             app:layout_constraintRight_toRightOf="parent">
