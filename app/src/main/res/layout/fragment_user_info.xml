@@ -1,0 +1,309 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+  xmlns:tools="http://schemas.android.com/tools"
+  android:layout_width="match_parent"
+  android:layout_height="match_parent"
+  xmlns:app="http://schemas.android.com/apk/res-auto"
+  tools:context=".ui.userinfo.UserInfoFragment">
+
+  <TextView
+    android:id="@+id/welcome"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:text="안녕하세요"
+    android:textSize="20dp"
+    android:fontFamily="@font/spoqa_han_sans_neo_medium"
+    app:layout_constraintTop_toTopOf="parent"
+    app:layout_constraintLeft_toLeftOf="parent"
+    />
+
+  <TextView
+    android:id="@+id/username"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:text="이길연"
+    android:textSize="30dp"
+    android:textColor="@color/black"
+    android:fontFamily="@font/spoqa_han_sans_neo_bold"
+    app:layout_constraintTop_toBottomOf="@id/welcome"
+    app:layout_constraintLeft_toLeftOf="parent"
+    />
+
+  <TextView
+    android:id="@+id/username_extra"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:text="님"
+    android:textSize="30dp"
+    android:fontFamily="@font/spoqa_han_sans_neo_medium"
+    app:layout_constraintLeft_toRightOf="@id/username"
+    app:layout_constraintTop_toBottomOf="@id/welcome"
+    />
+
+  <LinearLayout
+    android:id="@+id/weather_wrapper"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="10dp"
+    android:paddingTop="5dp"
+    android:paddingBottom="5dp"
+    android:paddingLeft="10dp"
+    android:paddingRight="10dp"
+    android:background="@drawable/radius_fill_white"
+    android:orientation="horizontal"
+    app:layout_constraintTop_toBottomOf="@id/username"
+    app:layout_constraintLeft_toLeftOf="parent"
+    app:layout_constraintRight_toRightOf="parent"
+    >
+    
+    <ImageView
+      android:layout_width="24dp"
+      android:layout_height="24dp"
+      android:layout_marginRight="10dp"
+      android:src="@drawable/ic_sun"
+      app:tint="#A0A0A0"
+      />
+
+    <TextView
+      android:layout_width="wrap_content"
+      android:layout_height="match_parent"
+      android:text="오늘은 운동하기 좋은 날씨네요"
+      android:fontFamily="@font/spoqa_han_sans_neo_medium"
+      android:gravity="center"
+      />
+    
+  </LinearLayout>
+
+  <TextView
+    android:id="@+id/this_week"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:text="THIS WEEK"
+    android:fontFamily="@font/spoqa_han_sans_neo_medium"
+    android:layout_marginTop="25dp"
+    app:layout_constraintTop_toBottomOf="@id/weather_wrapper"
+    app:layout_constraintLeft_toLeftOf="parent"
+    />
+
+  <androidx.constraintlayout.widget.ConstraintLayout
+    android:id="@+id/manage_table"
+    android:layout_width="0dp"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="5dp"
+    android:paddingTop="20dp"
+    android:paddingBottom="20dp"
+    android:background="@drawable/all_radius_fill_drak_grey"
+    app:layout_constraintTop_toBottomOf="@id/this_week"
+    app:layout_constraintLeft_toLeftOf="parent"
+    app:layout_constraintRight_toRightOf="parent"
+    >
+
+    <androidx.constraintlayout.widget.Guideline
+      android:id="@+id/guideline_ver1"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:orientation="vertical"
+      app:layout_constraintGuide_percent="0.325"
+      />
+
+
+    <TextView
+      android:id="@+id/manage_total_num_title"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:text="이번 주 관리점수"
+      android:fontFamily="@font/spoqa_han_sans_neo_medium"
+      android:textSize="@dimen/sub_font_size"
+      android:textColor="@color/white"
+      app:layout_constraintTop_toTopOf="parent"
+      app:layout_constraintLeft_toLeftOf="parent"
+      app:layout_constraintBottom_toBottomOf="parent"
+      app:layout_constraintRight_toRightOf="@id/guideline_ver1"
+      app:layout_constraintVertical_bias="0.05"
+      />
+
+    <TextView
+      android:id="@+id/manage_total_num"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:text="87"
+      android:fontFamily="@font/spoqa_han_sans_neo_medium"
+      android:textSize="56dp"
+      android:textColor="@color/white"
+      app:layout_constraintTop_toBottomOf="@id/manage_total_num_title"
+      app:layout_constraintLeft_toLeftOf="@id/manage_total_num_title"
+      app:layout_constraintRight_toRightOf="@id/manage_total_num_title"
+    />
+
+    <TextView
+      android:id="@+id/manage_record_title"
+      android:layout_width="0dp"
+      android:layout_height="wrap_content"
+      android:text="기록"
+      android:fontFamily="@font/spoqa_han_sans_neo_medium"
+      android:textSize="@dimen/sub_font_size"
+      android:textColor="@color/white"
+      android:gravity="center"
+      app:layout_constraintTop_toTopOf="parent"
+      app:layout_constraintLeft_toLeftOf="@id/guideline_ver1"
+      app:layout_constraintBottom_toBottomOf="parent"
+      app:layout_constraintRight_toLeftOf="@id/manage_weight_title"
+      app:layout_constraintVertical_bias="0.25"
+
+      />
+
+    <TextView
+      android:id="@+id/manage_record"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:text="80"
+      android:fontFamily="@font/spoqa_han_sans_neo_medium"
+      android:textSize="28dp"
+      android:textColor="@color/white"
+      app:layout_constraintTop_toBottomOf="@id/manage_record_title"
+      app:layout_constraintLeft_toLeftOf="@id/manage_record_title"
+      app:layout_constraintRight_toRightOf="@id/manage_record_title"
+      />
+
+    <TextView
+      android:id="@+id/manage_weight_title"
+      android:layout_width="0dp"
+      android:layout_height="wrap_content"
+      android:text="체중"
+      android:fontFamily="@font/spoqa_han_sans_neo_medium"
+      android:textSize="@dimen/sub_font_size"
+      android:textColor="@color/white"
+      android:gravity="center"
+      app:layout_constraintTop_toTopOf="parent"
+      app:layout_constraintLeft_toRightOf="@id/manage_record_title"
+      app:layout_constraintBottom_toBottomOf="parent"
+      app:layout_constraintRight_toLeftOf="@id/manage_exercise_title"
+      app:layout_constraintVertical_bias="0.25"
+      />
+
+    <TextView
+      android:id="@+id/manage_weight"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:text="80"
+      android:fontFamily="@font/spoqa_han_sans_neo_medium"
+      android:textSize="28dp"
+      android:textColor="@color/white"
+      app:layout_constraintTop_toBottomOf="@id/manage_weight_title"
+      app:layout_constraintLeft_toLeftOf="@id/manage_weight_title"
+      app:layout_constraintRight_toRightOf="@id/manage_weight_title"
+      />
+
+    <TextView
+      android:id="@+id/manage_exercise_title"
+      android:layout_width="0dp"
+      android:layout_height="wrap_content"
+      android:text="운동"
+      android:fontFamily="@font/spoqa_han_sans_neo_medium"
+      android:textSize="@dimen/sub_font_size"
+      android:textColor="@color/white"
+      android:gravity="center"
+      app:layout_constraintTop_toTopOf="parent"
+      app:layout_constraintLeft_toRightOf="@id/manage_weight_title"
+      app:layout_constraintBottom_toBottomOf="parent"
+      app:layout_constraintRight_toLeftOf="@id/manage_diet_title"
+      app:layout_constraintVertical_bias="0.25"
+      />
+
+    <TextView
+      android:id="@+id/manage_exercise"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:text="83"
+      android:fontFamily="@font/spoqa_han_sans_neo_medium"
+      android:textSize="28dp"
+      android:textColor="@color/white"
+      app:layout_constraintTop_toBottomOf="@id/manage_exercise_title"
+      app:layout_constraintLeft_toLeftOf="@id/manage_exercise_title"
+      app:layout_constraintRight_toRightOf="@id/manage_exercise_title"
+      />
+
+    <TextView
+      android:id="@+id/manage_diet_title"
+      android:layout_width="0dp"
+      android:layout_height="wrap_content"
+      android:text="식단"
+      android:fontFamily="@font/spoqa_han_sans_neo_medium"
+      android:textSize="@dimen/sub_font_size"
+      android:textColor="@color/white"
+      android:gravity="center"
+      app:layout_constraintTop_toTopOf="parent"
+      app:layout_constraintLeft_toRightOf="@id/manage_exercise_title"
+      app:layout_constraintBottom_toBottomOf="parent"
+      app:layout_constraintRight_toRightOf="parent"
+      app:layout_constraintVertical_bias="0.25"
+
+      />
+
+    <TextView
+      android:id="@+id/manage_diet"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:text="79"
+      android:fontFamily="@font/spoqa_han_sans_neo_medium"
+      android:textSize="28dp"
+      android:textColor="@color/white"
+      app:layout_constraintTop_toBottomOf="@id/manage_diet_title"
+      app:layout_constraintLeft_toLeftOf="@id/manage_diet_title"
+      app:layout_constraintRight_toRightOf="@id/manage_diet_title"
+      />
+
+    <LinearLayout
+      android:layout_width="1dp"
+      android:layout_height="0dp"
+      android:background="@color/white"
+      app:layout_constraintBottom_toBottomOf="parent"
+      app:layout_constraintTop_toTopOf="parent"
+      app:layout_constraintLeft_toLeftOf="@id/guideline_ver1"
+      />
+
+
+  </androidx.constraintlayout.widget.ConstraintLayout>
+
+  <androidx.constraintlayout.widget.ConstraintLayout
+    android:layout_width="0dp"
+    android:layout_height="wrap_content"
+    android:paddingTop="15dp"
+    android:paddingBottom="15dp"
+    android:paddingLeft="20dp"
+    android:paddingRight="20dp"
+    android:layout_marginTop="5dp"
+    android:background="@drawable/all_radius_fill_drak_grey"
+    app:layout_constraintTop_toBottomOf="@id/manage_table"
+    app:layout_constraintLeft_toLeftOf="parent"
+    app:layout_constraintRight_toRightOf="parent"
+    >
+
+    <TextView
+      android:layout_width="0dp"
+      android:layout_height="wrap_content"
+      android:text="관리점수를 높이려면? 당뇨 교육자료를 확인하세요"
+      android:textColor="@color/white"
+      android:textSize="@dimen/sub_font_size"
+      android:fontFamily="@font/spoqa_han_sans_neo_medium"
+      app:layout_constraintTop_toTopOf="parent"
+      app:layout_constraintLeft_toLeftOf="parent"
+      app:layout_constraintBottom_toBottomOf="parent"
+      app:layout_constraintRight_toLeftOf="@id/img_right_arrow"
+      />
+
+    <ImageView
+      android:id="@+id/img_right_arrow"
+      android:layout_width="15dp"
+      android:layout_height="15dp"
+      android:src="@drawable/ic_right_arrow_angle"
+      app:tint="@color/white"
+      app:layout_constraintTop_toTopOf="parent"
+      app:layout_constraintRight_toRightOf="parent"
+      app:layout_constraintBottom_toBottomOf="parent"
+      />
+
+
+  </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

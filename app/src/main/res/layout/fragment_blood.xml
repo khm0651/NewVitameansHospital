@@ -120,6 +120,8 @@
                         android:fontFamily="@font/spoqa_han_sans_neo_medium"/>
                 </LinearLayout>
             </androidx.constraintlayout.widget.ConstraintLayout>
+
+
             <androidx.constraintlayout.widget.ConstraintLayout
                 android:id="@+id/my_blood_bloodpressure"
                 android:layout_width="match_parent"
@@ -197,6 +199,7 @@
                 </LinearLayout>
             </androidx.constraintlayout.widget.ConstraintLayout>
 
+
         </androidx.constraintlayout.widget.ConstraintLayout>
 
         <androidx.constraintlayout.widget.ConstraintLayout
@@ -214,7 +217,6 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:orientation="vertical"
-                android:background="@drawable/my_blood_line"
                 app:layout_constraintGuide_percent="0.5"/>
 
             <LinearLayout
