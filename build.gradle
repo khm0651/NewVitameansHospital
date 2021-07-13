@@ -1,3 +1,4 @@
+
 // Top-level build file where you can add configuration options common to all sub-projects/modules.
 buildscript {
     ext{
@@ -29,11 +30,26 @@ allprojects {
     repositories {
         google()
         mavenCentral()
-        jcenter() // Warning: this repository is going to shut down soon
         maven { url 'https://jitpack.io' }
     }
 }
 
 task clean(type: Delete) {
     delete rootProject.buildDir
+}
+
+task copyGitHooks(type: Copy) {
+    from("/teamConfig/git/git-hooks/") {
+        include '**/*'
+        rename '(.*)', '$1'
+    }
+    into "/.git/hooks"
+}
+
+task installGitHooks(type: Exec) {
+    group 'git hooks'
+    workingDir rootDir
+    commandLine 'chmod'
+    args '-R', '+x', '.git/hooks/'
+    dependsOn copyGitHooks
 }
