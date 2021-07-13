@@ -1,12 +1,9 @@
 #!/bin/sh
-​
 FORBIDDEN_HTTPS_URL="https://github.com/khm0651/givitaHospitalDoctor.git" # insert your remote url (https)
 FORBIDDEN_SSH_URL="git@github.com:khm0651/givitaHospitalDoctor.git" # insert your remote url (ssh)
 FORBIDDEN_REF="refs/heads/main" # insert branch ref
-​
 remote="$1"
 url="$2"
-​
 if [ "$url" != "$FORBIDDEN_HTTPS_URL" -a "$url" != "$FORBIDDEN_SSH_URL" ]
 then
     exit 0 # Forked Project 에서는 제한하지 않음
