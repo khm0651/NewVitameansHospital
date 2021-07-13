@@ -9,7 +9,7 @@
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="330dp"
         android:paddingBottom="10dp"
         tools:context=".ui.weight.WeightFragment">
 
@@ -19,6 +19,7 @@
             android:layout_height="wrap_content"
             android:textSize="@dimen/defalut_font_size"
             android:text="내 최근 체중"
+            android:layout_marginLeft="20dp"
             android:fontFamily="@font/spoqa_han_sans_neo_medium"
             app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintLeft_toLeftOf="parent" />
@@ -29,6 +30,7 @@
             android:layout_height="wrap_content"
             android:textSize="@dimen/sub_font_size"
             android:text="더보기"
+            android:layout_marginRight="20dp"
             android:fontFamily="@font/spoqa_han_sans_neo_medium"
             app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintRight_toRightOf="parent" />
@@ -38,19 +40,18 @@
             android:layout_width="0dp"
             android:layout_height="150dp"
             android:layout_marginTop="10dp"
-            android:background="@drawable/shadow"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:elevation="5dp"
+            android:background="@drawable/my_blood_layout_background"
             app:layout_constraintTop_toBottomOf="@id/title"
             app:layout_constraintLeft_toLeftOf="parent"
             app:layout_constraintRight_toRightOf="parent"
-            app:layout_constraintBottom_toTopOf="@id/btn_weight_record"
-
-            >
+            app:layout_constraintBottom_toTopOf="@id/btn_weight_record">
 
             <androidx.constraintlayout.widget.ConstraintLayout
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:layout_marginLeft="3dp"
-                android:layout_marginRight="3dp"
                 android:layout_marginBottom="10dp"
                 android:paddingLeft="20dp"
                 android:paddingRight="20dp"
@@ -145,6 +146,9 @@
             android:layout_width="0dp"
             android:layout_height="55dp"
             android:layout_marginTop="10dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:elevation="5dp"
             android:background="@drawable/my_blood_button_background"
             app:layout_constraintTop_toBottomOf="@id/content_wrapper"
             app:layout_constraintLeft_toLeftOf="parent"

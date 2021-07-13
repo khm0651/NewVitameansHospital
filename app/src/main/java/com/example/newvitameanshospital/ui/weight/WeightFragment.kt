@@ -7,16 +7,12 @@ import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import com.example.newvitameanshospital.databinding.FragmentWeightBinding
 import com.github.mikephil.charting.charts.BarChart
-import com.github.mikephil.charting.components.AxisBase
 import com.github.mikephil.charting.components.XAxis
 import com.github.mikephil.charting.data.BarData
 import com.github.mikephil.charting.data.BarDataSet
 import com.github.mikephil.charting.data.BarEntry
-import com.github.mikephil.charting.data.Entry
-import com.github.mikephil.charting.formatter.IValueFormatter
 import com.github.mikephil.charting.formatter.ValueFormatter
 import com.github.mikephil.charting.interfaces.datasets.IBarDataSet
-import com.github.mikephil.charting.utils.ViewPortHandler
 
 class WeightFragment : Fragment() {
     lateinit var binding: FragmentWeightBinding
@@ -101,11 +97,5 @@ class WeightFragment : Fragment() {
             data.barWidth = 0.6f
             chartview.data = data
         }
-
-
-
-
-
-
     }
 }
