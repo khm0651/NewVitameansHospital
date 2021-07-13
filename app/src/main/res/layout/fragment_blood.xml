@@ -8,7 +8,7 @@
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="330dp"
         >
 
         <TextView
@@ -20,20 +20,22 @@
             android:fontFamily="@font/spoqa_han_sans_neo_bold"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"/>
+
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:fontFamily="@font/spoqa_han_sans_neo_medium"
             android:text="더보기"
             android:textSize="@dimen/sub_font_size"
-            android:fontFamily="@font/spoqa_han_sans_neo_medium"
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"/>
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
         <androidx.constraintlayout.widget.ConstraintLayout
             android:id="@+id/layout_my_blood"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:background="@drawable/my_blood_layout_background"
             android:padding="20dp"
+            android:layout_marginTop="10dp"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/tv_my_blood">
 
@@ -41,14 +43,23 @@
                 android:id="@+id/guideline1"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:background="@drawable/my_blood_line"
                 android:orientation="horizontal"
                 app:layout_constraintGuide_percent="0.5" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@drawable/my_blood_line"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"/>
 
             <androidx.constraintlayout.widget.ConstraintLayout
                 android:id="@+id/my_blood_bloodsugar"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:layout_marginBottom="20dp"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
@@ -109,8 +120,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="127"
-                        android:textSize="@dimen/my_blood_text"
-                        android:fontFamily="@font/spoqa_han_sans_neo_medium"/>
+                        android:textSize="@dimen/my_blood_text" />
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
@@ -124,7 +134,7 @@
                 android:id="@+id/my_blood_bloodpressure"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                app:layout_constraintVertical_weight="1"
+                android:layout_marginTop="20dp"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/guideline1"
                 app:layout_constraintEnd_toEndOf="parent"
@@ -185,8 +195,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="121/69"
-                        android:textSize="@dimen/my_blood_text"
-                        android:fontFamily="@font/spoqa_han_sans_neo_medium"/>
+                        android:textSize="@dimen/my_blood_text" />
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
@@ -205,7 +214,6 @@
             android:background="@drawable/my_blood_button_background"
             android:padding="15dp"
             android:layout_marginTop="15dp"
-            android:elevation="10dp"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/layout_my_blood">
 
@@ -214,8 +222,16 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:orientation="vertical"
-                android:background="@drawable/my_blood_line"
                 app:layout_constraintGuide_percent="0.5"/>
+
+            <LinearLayout
+                android:layout_width="1dp"
+                android:layout_height="30dp"
+                android:background="@drawable/my_blood_line"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"/>
 
             <LinearLayout
                 android:id="@+id/btn_my_bloodsugar"
