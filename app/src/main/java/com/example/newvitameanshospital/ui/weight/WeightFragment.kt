@@ -1,6 +1,8 @@
 package com.example.newvitameanshospital.ui.weight
 
+import android.content.Context
 import android.os.Bundle
+import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -18,6 +20,12 @@ class WeightFragment : Fragment() {
     lateinit var binding: FragmentWeightBinding
     lateinit var chartview: BarChart
 
+
+    override fun onAttach(context: Context) {
+        super.onAttach(context)
+        Log.d("WeightFragment","attach")
+    }
+
     override fun onCreateView(
         inflater: LayoutInflater,
         container: ViewGroup?,
@@ -31,7 +39,7 @@ class WeightFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         setChart()
-        setData(7, 20f)
+        setData()
     }
 
     private fun setChart() {
@@ -61,6 +69,9 @@ class WeightFragment : Fragment() {
             yLAxis.setDrawLabels(false)
             yLAxis.setDrawAxisLine(false)
             yLAxis.setDrawGridLines(false)
+            yLAxis.axisMaximum = 80f
+            yLAxis.axisMinimum = 0f
+            yLAxis.labelCount = 3
 
             var yRAxis = chart.axisRight
             yRAxis.setDrawLabels(false)
@@ -69,16 +80,18 @@ class WeightFragment : Fragment() {
         }.also { chartview = it.chart }
     }
 
-    fun setData(count: Int, range: Float) {
-        val start = 1f
-        val values = ArrayList<BarEntry>()
-        var i = start.toInt()
-        while (i < start + count) {
-            val `val` = (Math.random() * (range + 1)).toFloat()
-            values.add(BarEntry(i.toFloat(), `val`))
+    fun setData() {
 
-            i++
-        }
+        val values = ArrayList<BarEntry>()
+
+        values.add(BarEntry(1f, 77.2f))
+        values.add(BarEntry(2f, 75.4f))
+        values.add(BarEntry(3f, 72.8f))
+        values.add(BarEntry(4f, 70.1f))
+        values.add(BarEntry(5f, 68.6f))
+        values.add(BarEntry(6f, 65.2f))
+        values.add(BarEntry(7f, 63.3f))
+
         val set1: BarDataSet
         if (chartview.data != null &&
             chartview.data.dataSetCount > 0
@@ -88,7 +101,7 @@ class WeightFragment : Fragment() {
             chartview.data.notifyDataChanged()
             chartview.notifyDataSetChanged()
         } else {
-            set1 = BarDataSet(values, "The year 2017")
+            set1 = BarDataSet(values, "Weight")
             set1.setDrawIcons(false)
             val dataSets = ArrayList<IBarDataSet>()
             dataSets.add(set1)
