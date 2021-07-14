@@ -1,17 +1,12 @@
 package com.example.newvitameanshospital.ui.exercise
 
-import android.content.Context
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.Toast
 import androidx.databinding.DataBindingUtil
-import androidx.recyclerview.widget.DiffUtil
 import androidx.recyclerview.widget.RecyclerView
 import com.example.newvitameanshospital.R
 import com.example.newvitameanshospital.databinding.ItemExerciseRecyclerBinding
-import com.google.android.material.snackbar.Snackbar
-import java.text.SimpleDateFormat
 
 class ExerciseAdpater() :RecyclerView.Adapter<ExerciseAdpater.CustomViewHolder>()
 {
@@ -32,8 +27,6 @@ class ExerciseAdpater() :RecyclerView.Adapter<ExerciseAdpater.CustomViewHolder>(
     override fun onBindViewHolder(holder: ExerciseAdpater.CustomViewHolder, position: Int) {
 
         holder.bind(position)
-
-
     }
 
     override fun getItemCount(): Int {
@@ -41,6 +34,7 @@ class ExerciseAdpater() :RecyclerView.Adapter<ExerciseAdpater.CustomViewHolder>(
     }
 
     inner class CustomViewHolder(private val binding: ItemExerciseRecyclerBinding): RecyclerView.ViewHolder(binding.root){
+
         fun bind(position: Int){
             binding.apply {
                 if (position==1) {
@@ -63,7 +57,5 @@ class ExerciseAdpater() :RecyclerView.Adapter<ExerciseAdpater.CustomViewHolder>(
                 }
             }
         }
-
-
     }
 }

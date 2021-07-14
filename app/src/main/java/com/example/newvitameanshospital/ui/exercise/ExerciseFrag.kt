@@ -11,11 +11,13 @@ import com.example.newvitameanshospital.databinding.FragmentExerciseBinding
 class ExerciseFrag: Fragment() {
     private lateinit var binding: FragmentExerciseBinding
     var exerciseList : ArrayList<ExerciseList> = ArrayList()
+
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?
     ): View? {
         binding = FragmentExerciseBinding.inflate(inflater,container,false)
 
        // exerciseList = arrayListOf(ExerciseList())
+
         binding.apply {
             rvExercise.layoutManager=LinearLayoutManager(activity,LinearLayoutManager.VERTICAL,false)
             rvExercise.setHasFixedSize(true)
