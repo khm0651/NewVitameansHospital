@@ -7,11 +7,14 @@ import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import com.example.newvitameanshospital.databinding.FragmentBloodBinding
 
-class BloodFrag: Fragment() {
+class BloodFrag : Fragment() {
     private lateinit var binding: FragmentBloodBinding
-    override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?
+    override fun onCreateView(
+        inflater: LayoutInflater,
+        container: ViewGroup?,
+        savedInstanceState: Bundle?
     ): View? {
-        binding = FragmentBloodBinding.inflate(inflater,container,false)
+        binding = FragmentBloodBinding.inflate(inflater, container, false)
         return binding.root
     }
 }

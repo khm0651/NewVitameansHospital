@@ -1,31 +1,26 @@
 package com.example.newvitameanshospital.ui.weight
 
-import android.R
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import androidx.core.content.ContextCompat
 import androidx.fragment.app.Fragment
 import com.example.newvitameanshospital.databinding.FragmentWeightBinding
 import com.github.mikephil.charting.charts.BarChart
-import com.github.mikephil.charting.components.AxisBase
 import com.github.mikephil.charting.components.XAxis
 import com.github.mikephil.charting.data.BarData
 import com.github.mikephil.charting.data.BarDataSet
 import com.github.mikephil.charting.data.BarEntry
 import com.github.mikephil.charting.formatter.ValueFormatter
 import com.github.mikephil.charting.interfaces.datasets.IBarDataSet
-import java.util.*
-
 
 class WeightFragment : Fragment() {
-
     lateinit var binding: FragmentWeightBinding
     lateinit var chartview: BarChart
 
     override fun onCreateView(
-        inflater: LayoutInflater, container: ViewGroup?,
+        inflater: LayoutInflater,
+        container: ViewGroup?,
         savedInstanceState: Bundle?,
     ): View? {
         // Inflate the layout for this fragment
@@ -47,7 +42,7 @@ class WeightFragment : Fragment() {
             chart.description.isEnabled = false
             chart.setPinchZoom(false)
             chart.setDrawGridBackground(false)
-
+            chart.isDoubleTapToZoomEnabled = false
 
             var legend = chart.legend
             legend.isEnabled = false
@@ -57,8 +52,8 @@ class WeightFragment : Fragment() {
             xAxis.setDrawGridLines(false)
             xAxis.labelCount = 7
             xAxis.valueFormatter = object : ValueFormatter() {
-                override fun getFormattedValue(value: Float, axis: AxisBase?): String {
-                    return value.toString()
+                override fun getFormattedValue(value: Float): String {
+                    return value.toInt().toString()
                 }
             }
 
@@ -71,7 +66,6 @@ class WeightFragment : Fragment() {
             yRAxis.setDrawLabels(false)
             yRAxis.setDrawAxisLine(false)
             yRAxis.setDrawGridLines(false)
-
         }.also { chartview = it.chart }
     }
 
@@ -104,6 +98,5 @@ class WeightFragment : Fragment() {
             data.barWidth = 0.6f
             chartview.data = data
         }
-
     }
 }

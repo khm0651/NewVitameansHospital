@@ -1,6 +1,5 @@
 package com.example.newvitameanshospital.customview
 
-
 import android.animation.ObjectAnimator
 import android.content.Context
 import android.content.res.TypedArray
@@ -10,7 +9,6 @@ import android.view.View
 import android.view.animation.Interpolator
 import androidx.core.widget.NestedScrollView
 import com.example.newvitameanshospital.R
-
 
 class BounceScrollView(context: Context, attrs: AttributeSet?, defStyleAttr: Int) :
     NestedScrollView(context, attrs, defStyleAttr) {
@@ -192,19 +190,19 @@ class BounceScrollView(context: Context, attrs: AttributeSet?, defStyleAttr: Int
         mOverScrollListener = overScrollListener
     }
 
-    ////////////////////////////////////////////////////////////////////////////////////////////////
+    // //////////////////////////////////////////////////////////////////////////////////////////////
     private class DefaultQuartOutInterpolator : Interpolator {
         override fun getInterpolation(input: Float): Float {
             return (1.0f - Math.pow((1 - input).toDouble(), 4.0)).toFloat()
         }
     }
 
-    ////////////////////////////////////////////////////////////////////////////////////////////////
+    // //////////////////////////////////////////////////////////////////////////////////////////////
     interface OnScrollListener {
         fun onScrolling(scrollX: Int, scrollY: Int)
     }
 
-    ////////////////////////////////////////////////////////////////////////////////////////////////
+    // //////////////////////////////////////////////////////////////////////////////////////////////
     interface OnOverScrollListener {
         /**
          * @param fromStart LTR, the left is start; RTL, the right is start.
