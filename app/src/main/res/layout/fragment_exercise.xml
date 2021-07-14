@@ -1,0 +1,196 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/default_margin"
+        android:layout_marginRight="@dimen/default_margin"
+        android:paddingBottom="10dp"
+        tools:context=".ui.weight.WeightFragment">
+
+        <TextView
+            android:id="@+id/title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/spoqa_han_sans_neo_medium"
+            android:layout_marginLeft="10dp"
+            android:text="이번 주 운동 기록"
+            android:textSize="@dimen/defalut_font_size"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/more_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/spoqa_han_sans_neo_medium"
+            android:layout_marginRight="10dp"
+            android:text="더보기"
+            android:textSize="@dimen/sub_font_size"
+            app:layout_constraintBottom_toTopOf="@id/content_wrapper"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <LinearLayout
+            android:id="@+id/content_wrapper"
+            android:layout_width="0dp"
+            android:layout_height="400dp"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/shadow"
+            android:orientation="horizontal"
+            app:layout_constraintBottom_toTopOf="@id/btn_weight_record"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/title">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="3dp"
+                android:layout_marginRight="3dp"
+                android:layout_marginBottom="10dp"
+                android:elevation="@dimen/defalut_elevation_size"
+                android:background="@drawable/radius_fill_white"
+                android:paddingLeft="30dp"
+                android:paddingTop="10dp"
+                android:paddingRight="30dp"
+                android:paddingBottom="10dp">
+
+                <androidx.constraintlayout.widget.Guideline
+                    android:id="@+id/hLine1"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal"
+                    app:layout_constraintGuide_percent="0.1" />
+                <androidx.constraintlayout.widget.Guideline
+                    android:id="@+id/hLine2"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal"
+                    app:layout_constraintGuide_percent="0.3" />
+
+                <androidx.constraintlayout.widget.Guideline
+                    android:id="@+id/vLine1"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical"
+                    app:layout_constraintGuide_percent="0.2" />
+                <androidx.constraintlayout.widget.Guideline
+                    android:id="@+id/vLine2"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical"
+                    app:layout_constraintGuide_percent="0.5" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/spoqa_han_sans_neo_medium"
+                    android:text="이번 주 운동"
+                    android:textSize="@dimen/sub_font_size"
+                    app:layout_constraintBottom_toTopOf="@+id/tv_number_of_exercise"
+                    app:layout_constraintRight_toRightOf="@id/vLine1"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintTop_toTopOf="@id/hLine1" />
+
+                <TextView
+                    android:id="@+id/tv_number_of_exercise"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/spoqa_han_sans_neo_medium"
+                    android:text="3회"
+                    android:textSize="26dp"
+                    app:layout_constraintTop_toTopOf="@id/hLine1"
+                    app:layout_constraintBottom_toBottomOf="@id/hLine2"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintRight_toRightOf="@id/vLine1"/>
+
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/spoqa_han_sans_neo_medium"
+                    android:text="40대 여성 중"
+                    android:textSize="@dimen/sub_font_size"
+                    app:layout_constraintTop_toTopOf="@id/hLine1"
+                    app:layout_constraintBottom_toTopOf="@id/tv_percent_of_exercise"
+                    app:layout_constraintLeft_toLeftOf="@id/vLine2"
+                    app:layout_constraintRight_toRightOf="parent"/>
+
+                <TextView
+                    android:id="@+id/tv_percent_of_exercise"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/spoqa_han_sans_neo_medium"
+                    android:text="상위 10%"
+                    android:textSize="26dp"
+                    app:layout_constraintTop_toTopOf="@id/hLine1"
+                    app:layout_constraintBottom_toBottomOf="@id/hLine2"
+                    app:layout_constraintLeft_toLeftOf="@id/vLine2"
+                    app:layout_constraintRight_toRightOf="parent"/>
+                <View
+                    android:layout_width="0dp"
+                    android:layout_height="1dp"
+                    android:background="@color/grey500"
+                    app:layout_constraintTop_toTopOf="@id/hLine2"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintRight_toRightOf="parent"/>
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/rv_exercise"
+                    android:layout_width="0dp"
+                    android:layout_height="0dp"
+                    app:layout_constraintTop_toTopOf="@id/hLine2"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintRight_toRightOf="parent"/>
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </LinearLayout>
+
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/btn_weight_record"
+            android:layout_width="0dp"
+            android:layout_height="55dp"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/my_blood_button_background"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/content_wrapper">
+
+            <ImageView
+                android:id="@+id/img"
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:layout_marginRight="10dp"
+                android:src="@drawable/ic_running_stick_figure"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintRight_toLeftOf="@id/btn_title"
+                app:layout_constraintTop_toTopOf="parent"
+                app:tint="@color/grey300"
+
+                />
+
+            <TextView
+                android:id="@+id/btn_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/spoqa_han_sans_neo_medium"
+                android:text="운동 기록"
+                android:textColor="@color/grey300"
+                android:textSize="@dimen/defalut_font_size"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

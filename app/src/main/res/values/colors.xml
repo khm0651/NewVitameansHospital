@@ -8,6 +8,93 @@
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
 
+
     <color name="my_blood_layout_background_color">#ffffff</color>
     <color name="my_blood_button_text_color">#ffffff</color>
+
+
+    <color name="colorPrimary">#6200EE</color>
+    <color name="colorPrimaryDark">#3700B3</color>
+    <color name="colorAccent">#03DAC5</color>
+
+    <color name="lighterLevel">#c3f2f2</color>
+    <color name="moderationLevel">#33cccc</color>
+    <color name="surfeitLevel">#078080</color>
+
+
+    <color name="blurDialog">#78000000</color>
+
+    <color name="colorTextBlack">#212121</color>
+
+    <color name="GiBlue">#008cff</color>
+
+    <color name="VitaBlue8">#33008CFF</color>
+
+    <color name="VitaBlue10">#1A008CFF</color>
+
+    <color name="grey200">#eeeeee</color>
+
+    <color name="grey300">#e0e0e0</color>
+
+    <color name="grey400">#bdbdbd</color>
+
+    <color name="grey50Light">#ffffff</color>
+
+    <color name="grey50">#fafafa</color>
+
+    <color name="grey100">#f5f5f5</color>
+
+    <color name="grey500Light">#cfcfcf</color>
+
+    <color name="grey900">#212121</color>
+
+    <color name="grey900_5">#80212121</color>
+
+    <color name="grey900_8">#14212121</color>
+
+    <color name="grey500">#9e9e9e</color>
+
+    <color name="grey600">#757575</color>
+
+    <color name="grey700">#616161</color>
+
+    <color name="grey800">#424242</color>
+
+    <color name="grey900Dark">#000000</color>
+
+    <color name="grey900Dark_004">#0a000000</color>
+
+    <color name="grey6a6a6a">#6a6a6a</color>
+
+    <color name="dailySleep">#F39E21</color>
+
+    <color name="dailyHint">#f8a225</color>
+
+    <color name="dailyWalk">#06CC4C</color>
+    <color name="dailyWalk15">#2606CC4C</color>
+
+    <color name="dailyWeight">#7F12B5</color>
+    <color name="dailyWeight12">#1F7F12B5</color>
+    <color name="dailyRecord">#33CCCC</color>
+    <color name="dailyRecord10">#1A33CCCC</color>
+
+    <color name="fluctuationUp">#AA0000</color>
+
+    <color name="fluctuationDown">#0077d9</color>
+
+    <color name="colorTextProductNotAvailable">#d50000</color>
+
+    <color name="colorBgProductNotAvailable">#0FD50000</color>
+
+    <color name="colorChallenge">#33cccc</color>
+
+    <color name="warm_grey">#979797</color>
+    <color name="GiBlack">#212121</color>
+    <color name="GiGray">#616161</color>
+    <color name="f666666">#666666</color>
+    <color name="f999999">#999999</color>
+    <color name="fff9600">#ff9600</color>
+    <color name="f333333">#333333</color>
+    <color name="ffa3b3b">#fa3b3b</color>
+    <color name="ff7f7f7">#f7f7f7</color>
 </resources>

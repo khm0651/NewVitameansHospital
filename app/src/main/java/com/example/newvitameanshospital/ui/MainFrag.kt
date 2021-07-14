@@ -8,6 +8,7 @@ import android.view.ViewOutlineProvider
 import androidx.fragment.app.Fragment
 import com.example.newvitameanshospital.R
 import com.example.newvitameanshospital.databinding.FragmentMainBinding
+import com.example.newvitameanshospital.ui.exercise.ExerciseFrag
 import com.example.newvitameanshospital.ui.myblood.BloodFrag
 import com.example.newvitameanshospital.ui.userinfo.UserInfoFragment
 import com.example.newvitameanshospital.ui.weight.WeightFragment
@@ -30,14 +31,18 @@ class MainFrag : Fragment() {
         val userInfoFrag = UserInfoFragment()
         val weightFrag = WeightFragment()
         val bloodFrag = BloodFrag()
+        val exerciseFrag = ExerciseFrag()
         val manager = childFragmentManager
         val transaction = manager.beginTransaction()
+
         transaction.add(R.id.user_info_frag, userInfoFrag, userInfoFrag.javaClass.name)
         transaction.add(R.id.blood_pressure_sugar_frag, bloodFrag, bloodFrag.javaClass.name)
+        transaction.add(R.id.exercise_frag, exerciseFrag, exerciseFrag.javaClass.name)
         transaction.add(R.id.weight_frag, weightFrag, weightFrag.javaClass.name)
         transaction.commit()
 
         binding.apply {
+
 
             appbarLayout.outlineProvider = null
             svMain.setOnScrollChangeListener { _, _, scrollY, _, _ ->
