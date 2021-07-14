@@ -4,6 +4,7 @@ import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.view.ViewOutlineProvider
 import androidx.fragment.app.Fragment
 import com.example.newvitameanshospital.R
 import com.example.newvitameanshospital.databinding.FragmentMainBinding
@@ -14,7 +15,6 @@ import com.example.newvitameanshospital.ui.weight.WeightFragment
 class MainFrag : Fragment() {
 
     lateinit var binding: FragmentMainBinding
-
     override fun onCreateView(
         inflater: LayoutInflater,
         container: ViewGroup?,
@@ -36,5 +36,14 @@ class MainFrag : Fragment() {
         transaction.add(R.id.blood_pressure_sugar_frag, bloodFrag, bloodFrag.javaClass.name)
         transaction.add(R.id.weight_frag, weightFrag, weightFrag.javaClass.name)
         transaction.commit()
+
+        binding.apply {
+
+            appbarLayout.outlineProvider = null
+            svMain.setOnScrollChangeListener { _, _, scrollY, _, _ ->
+                if (scrollY > 0) appbarLayout.outlineProvider = ViewOutlineProvider.BOUNDS
+                else appbarLayout.outlineProvider = null
+            }
+        }
     }
 }
