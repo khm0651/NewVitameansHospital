@@ -3,6 +3,9 @@ plugins {
     id 'kotlin-android'
     id 'dagger.hilt.android.plugin'
     id 'kotlin-kapt'
+    id 'org.jlleitschuh.gradle.ktlint' version "10.0.0"
+    id 'org.jlleitschuh.gradle.ktlint-idea' version "10.0.0"
+
 }
 
 android {
@@ -17,6 +20,8 @@ android {
         versionName "1.0"
 
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+        // Enabling multidex support.
+        multiDexEnabled true
     }
 
     buildTypes {
