@@ -56,30 +56,41 @@
                   android:layout_height="match_parent"
                   android:orientation="vertical">
 
-                    <FrameLayout
+                    <include
                       android:id="@+id/user_info_frag"
                       android:layout_width="match_parent"
-                      android:layout_height="wrap_content" />
+                      android:layout_height="wrap_content"
+                      layout="@layout/fragment_user_info"
+                      />
 
-                    <FrameLayout
+                    <include
                       android:id="@+id/blood_pressure_sugar_frag"
                       android:layout_width="match_parent"
-                      android:layout_height="wrap_content" />
+                      android:layout_height="wrap_content"
+                      android:layout_marginTop="20dp"
+                      layout="@layout/fragment_blood"
+                      />
 
-                    <FrameLayout
+                    <include
                       android:id="@+id/weight_frag"
                       android:layout_width="match_parent"
-                      android:layout_height="wrap_content" />
+                      android:layout_height="wrap_content"
+                      android:layout_marginTop="20dp"
+                      layout="@layout/fragment_weight"
+                      />
 
-                    <FrameLayout
+                    <include
                       android:id="@+id/exercise_frag"
                       android:layout_width="match_parent"
-                      android:layout_height="wrap_content" />
+                      android:layout_height="wrap_content"
+                      android:layout_marginTop="20dp"
+                      layout="@layout/fragment_exercise"
+                      />
 
-                    <FrameLayout
-                      android:id="@+id/dietary_record_frag"
-                      android:layout_width="match_parent"
-                      android:layout_height="wrap_content" />
+<!--                    <FrameLayout-->
+<!--                      android:id="@+id/dietary_record_frag"-->
+<!--                      android:layout_width="match_parent"-->
+<!--                      android:layout_height="wrap_content" />-->
 
                 </LinearLayout>
 

@@ -1,13 +1,9 @@
 package com.example.newvitameanshospital.ui.weight
 
-import android.content.Context
-import android.os.Bundle
-import android.util.Log
-import android.view.LayoutInflater
 import android.view.View
-import android.view.ViewGroup
-import androidx.fragment.app.Fragment
+import androidx.lifecycle.LifecycleOwner
 import com.example.newvitameanshospital.databinding.FragmentWeightBinding
+import com.example.newvitameanshospital.ui.VitaMainFragPart
 import com.github.mikephil.charting.charts.BarChart
 import com.github.mikephil.charting.components.XAxis
 import com.github.mikephil.charting.data.BarData
@@ -16,27 +12,15 @@ import com.github.mikephil.charting.data.BarEntry
 import com.github.mikephil.charting.formatter.ValueFormatter
 import com.github.mikephil.charting.interfaces.datasets.IBarDataSet
 
-class WeightFragment : Fragment() {
-    lateinit var binding: FragmentWeightBinding
+class WeightFrag : VitaMainFragPart<FragmentWeightBinding>() {
+
     lateinit var chartview: BarChart
 
-    override fun onAttach(context: Context) {
-        super.onAttach(context)
-        Log.d("WeightFragment", "attach")
+    override fun onCreateView(view: View, lifecycleOwner: LifecycleOwner) {
+        super.onCreateView(view, lifecycleOwner)
     }
 
-    override fun onCreateView(
-        inflater: LayoutInflater,
-        container: ViewGroup?,
-        savedInstanceState: Bundle?,
-    ): View? {
-        // Inflate the layout for this fragment
-        binding = FragmentWeightBinding.inflate(inflater, container, false)
-        return binding.root
-    }
-
-    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
-        super.onViewCreated(view, savedInstanceState)
+    override fun onViewCreated() {
         setChart()
         setData()
     }

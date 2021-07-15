@@ -1,31 +1,23 @@
 package com.example.newvitameanshospital.ui.exercise
 
-import android.os.Bundle
-import android.view.LayoutInflater
 import android.view.View
-import android.view.ViewGroup
-import androidx.fragment.app.Fragment
+import androidx.lifecycle.LifecycleOwner
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.newvitameanshospital.databinding.FragmentExerciseBinding
+import com.example.newvitameanshospital.ui.VitaMainFragPart
 
-class ExerciseFrag : Fragment() {
-    private lateinit var binding: FragmentExerciseBinding
+class ExerciseFrag : VitaMainFragPart<FragmentExerciseBinding>() {
     var exerciseList: ArrayList<ExerciseList> = ArrayList()
 
-    override fun onCreateView(
-        inflater: LayoutInflater,
-        container: ViewGroup?,
-        savedInstanceState: Bundle?
-    ): View? {
-        binding = FragmentExerciseBinding.inflate(inflater, container, false)
-
-       // exerciseList = arrayListOf(ExerciseList())
-
+    override fun onCreateView(view: View, lifecycleOwner: LifecycleOwner) {
+        super.onCreateView(view, lifecycleOwner)
         binding.apply {
-            rvExercise.layoutManager = LinearLayoutManager(activity, LinearLayoutManager.VERTICAL, false)
+            rvExercise.layoutManager = LinearLayoutManager(context)
             rvExercise.setHasFixedSize(true)
             rvExercise.adapter = ExerciseAdpater()
         }
-        return binding.root
+    }
+
+    override fun onViewCreated() {
     }
 }

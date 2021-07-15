@@ -21,11 +21,11 @@
       android:id="@+id/notificationListFrag"
       android:name="com.example.newvitameanshospital.ui.notification.NotificationListFrag"
       android:label="fragment_notification_list"
-      tools:layout="@layout/fragment_notification_list" />
+      tools:layout="@layout/activity_notification_list" />
     <fragment
       android:id="@+id/calendarFrag"
       android:name="com.example.newvitameanshospital.ui.calendar.CalendarFrag"
       android:label="CalendarFrag"
-      tools:layout="@layout/fragment_calendar"
+      tools:layout="@layout/activity_calendar"
       />
 </navigation>
