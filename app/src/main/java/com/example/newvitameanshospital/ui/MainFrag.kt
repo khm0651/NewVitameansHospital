@@ -34,7 +34,7 @@ class MainFrag : Fragment() {
         transaction.replace(R.id.user_info_frag, userInfoFrag, userInfoFrag.javaClass.name)
         transaction.replace(R.id.blood_pressure_sugar_frag, bloodFrag, bloodFrag.javaClass.name)
         transaction.replace(R.id.weight_frag, weightFrag, weightFrag.javaClass.name)
-        transaction.add(R.id.exercise_frag,exerciseFrag,exerciseFrag.javaClass.name)
+        transaction.add(R.id.exercise_frag, exerciseFrag, exerciseFrag.javaClass.name)
         transaction.commit()
         return binding.root
 
@@ -57,13 +57,13 @@ class MainFrag : Fragment() {
             }
 
             toolbar.setOnMenuItemClickListener {
-                when(it.itemId){
-                    R.id.ic_bell->{
+                when (it.itemId) {
+                    R.id.ic_bell -> {
                         findNavController().navigate(R.id.action_mainFrag_to_notificationListFrag)
                         true
                     }
 
-                    R.id.ic_calendar->{
+                    R.id.ic_calendar -> {
                         findNavController().navigate(R.id.action_mainFrag_to_calendarFrag)
                         true
                     }

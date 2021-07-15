@@ -20,10 +20,9 @@ class WeightFragment : Fragment() {
     lateinit var binding: FragmentWeightBinding
     lateinit var chartview: BarChart
 
-
     override fun onAttach(context: Context) {
         super.onAttach(context)
-        Log.d("WeightFragment","attach")
+        Log.d("WeightFragment", "attach")
     }
 
     override fun onCreateView(

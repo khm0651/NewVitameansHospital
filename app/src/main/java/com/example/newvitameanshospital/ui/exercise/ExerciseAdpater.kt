@@ -8,19 +8,18 @@ import androidx.recyclerview.widget.RecyclerView
 import com.example.newvitameanshospital.R
 import com.example.newvitameanshospital.databinding.ItemExerciseRecyclerBinding
 
-class ExerciseAdpater() :RecyclerView.Adapter<ExerciseAdpater.CustomViewHolder>()
-{
+class ExerciseAdpater() : RecyclerView.Adapter<ExerciseAdpater.CustomViewHolder>() {
 
-    //뷰홀더가 처음 생성될때
+    // 뷰홀더가 처음 생성될때
     override fun onCreateViewHolder(
         parent: ViewGroup,
         viewType: Int
     ): ExerciseAdpater.CustomViewHolder {
 
-
         return CustomViewHolder(
             DataBindingUtil.inflate(
-                LayoutInflater.from(parent.context),R.layout.item_exercise_recycler, parent, false)
+                LayoutInflater.from(parent.context), R.layout.item_exercise_recycler, parent, false
+            )
         )
     }
 
@@ -36,8 +35,9 @@ class ExerciseAdpater() :RecyclerView.Adapter<ExerciseAdpater.CustomViewHolder>(
     inner class CustomViewHolder(private val binding: ItemExerciseRecyclerBinding): RecyclerView.ViewHolder(binding.root){
 
         fun bind(position: Int){
+
             binding.apply {
-                if (position==1) {
+                if (position == 1) {
                     ivWeatherIcon.setImageResource(R.drawable.ic_baseline_cloud_queue_24)
                     tvDateExercise.setText("21.06.21")
                     tvDegreeExercise.setText("적정")
@@ -45,8 +45,7 @@ class ExerciseAdpater() :RecyclerView.Adapter<ExerciseAdpater.CustomViewHolder>(
                     tvKindExercise2.setVisibility(View.GONE)
                     ivWatchIcon2.setVisibility(View.GONE)
                     tvTimeExercise2.setVisibility(View.GONE)
-                }
-                else if (position==2){
+                } else if (position == 2) {
                     tvDateExercise.setText("21.06.19")
                     tvDegreeExercise.setText("저강도")
                     tvKindExercise.setText("근력운동")
