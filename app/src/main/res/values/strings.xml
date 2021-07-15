@@ -1,5 +1,8 @@
 <resources>
   <string name="app_name">NewVitameansHospital</string>
+
+  <string name="main_drawer_navigation_hospital">등록 병원 수정</string>
+  <string name="main_drawer_navigation_logout">로그아웃</string>
   <!-- TODO: Remove or change this placeholder text -->
   <string name="hello_blank_fragment">Hello blank fragment</string>
 </resources>

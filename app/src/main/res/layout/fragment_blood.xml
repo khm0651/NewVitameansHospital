@@ -247,7 +247,7 @@
           android:layout_height="55dp"
           android:background="@drawable/my_blood_button_background"
           android:padding="15dp"
-          android:elevation="7dp"
+          android:elevation="5dp"
           android:layout_marginTop="15dp"
           android:layout_marginLeft="@dimen/default_margin"
           android:layout_marginRight="@dimen/default_margin"
