@@ -38,7 +38,7 @@
           android:layout_width="0dp"
           android:layout_height="175dp"
           android:layout_marginTop="10dp"
-          android:elevation="5dp"
+          android:elevation="@dimen/defalut_elevation_size"
           android:background="@drawable/my_blood_layout_background"
           android:paddingLeft="15dp"
           android:paddingRight="15dp"
