@@ -19,7 +19,7 @@ class ExerciseFrag : Fragment() {
     ): View? {
         binding = FragmentExerciseBinding.inflate(inflater, container, false)
 
-       // exerciseList = arrayListOf(ExerciseList())
+        // exerciseList = arrayListOf(ExerciseList())
 
         binding.apply {
             rvExercise.layoutManager = LinearLayoutManager(activity, LinearLayoutManager.VERTICAL, false)

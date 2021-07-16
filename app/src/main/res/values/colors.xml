@@ -12,6 +12,9 @@
     <color name="my_blood_layout_background_color">#ffffff</color>
     <color name="my_blood_button_text_color">#ffffff</color>
 
+    <color name="tv_proportion_color">#A9A7A7</color>
+    <color name="coutour_color1">#CDCDCD</color>
+    <color name="coutour_color2">#D1D1D1</color>
 
     <color name="colorPrimary">#6200EE</color>
     <color name="colorPrimaryDark">#3700B3</color>
@@ -97,4 +100,5 @@
     <color name="f333333">#333333</color>
     <color name="ffa3b3b">#fa3b3b</color>
     <color name="ff7f7f7">#f7f7f7</color>
+>>>>>>> 9aff70e64b92180063bb132109d3bf9dd0f22c8a
 </resources>

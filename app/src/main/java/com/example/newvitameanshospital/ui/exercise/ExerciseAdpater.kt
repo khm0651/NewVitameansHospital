@@ -32,9 +32,9 @@ class ExerciseAdpater() : RecyclerView.Adapter<ExerciseAdpater.CustomViewHolder>
         return 3
     }
 
-    inner class CustomViewHolder(private val binding: ItemExerciseRecyclerBinding): RecyclerView.ViewHolder(binding.root){
+    inner class CustomViewHolder(private val binding: ItemExerciseRecyclerBinding) : RecyclerView.ViewHolder(binding.root) {
 
-        fun bind(position: Int){
+        fun bind(position: Int) {
 
             binding.apply {
                 if (position == 1) {
