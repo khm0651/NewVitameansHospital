@@ -9,5 +9,23 @@
         android:id="@+id/mainFrag"
         android:name="com.example.newvitameanshospital.ui.MainFrag"
         android:label="fragment_main"
-        tools:layout="@layout/fragment_main" />
+        tools:layout="@layout/fragment_main" >
+        <action
+          android:id="@+id/action_mainFrag_to_notificationListFrag"
+          app:destination="@id/notificationListFrag" />
+        <action
+          android:id="@+id/action_mainFrag_to_calendarFrag"
+          app:destination="@id/calendarFrag" />
+    </fragment>
+    <fragment
+      android:id="@+id/notificationListFrag"
+      android:name="com.example.newvitameanshospital.ui.notification.NotificationListFrag"
+      android:label="fragment_notification_list"
+      tools:layout="@layout/fragment_notification_list" />
+    <fragment
+      android:id="@+id/calendarFrag"
+      android:name="com.example.newvitameanshospital.ui.calendar.CalendarFrag"
+      android:label="CalendarFrag"
+      tools:layout="@layout/fragment_calendar"
+      />
 </navigation>
