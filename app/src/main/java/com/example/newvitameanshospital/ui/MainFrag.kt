@@ -6,6 +6,7 @@ import android.view.View
 import android.view.ViewGroup
 import android.view.ViewOutlineProvider
 import androidx.fragment.app.Fragment
+import androidx.fragment.app.viewModels
 import androidx.navigation.fragment.findNavController
 import com.example.newvitameanshospital.R
 import com.example.newvitameanshospital.databinding.FragmentMainBinding
@@ -14,10 +15,13 @@ import com.example.newvitameanshospital.ui.exercise.ExerciseFrag
 import com.example.newvitameanshospital.ui.myblood.BloodFrag
 import com.example.newvitameanshospital.ui.userinfo.UserInfoFragment
 import com.example.newvitameanshospital.ui.weight.WeightFragment
+import dagger.hilt.android.AndroidEntryPoint
 
+@AndroidEntryPoint
 class MainFrag : Fragment() {
 
     lateinit var binding: FragmentMainBinding
+    private val viewModel: MainVM by viewModels()
 
     override fun onCreateView(
         inflater: LayoutInflater,
@@ -34,17 +38,25 @@ class MainFrag : Fragment() {
         val manager = childFragmentManager
         val transaction = manager.beginTransaction()
 
-        transaction.add(R.id.dietary_record_frag, dietFrag, dietFrag.javaClass.name)
+        transaction.replace(R.id.dietary_record_frag, dietFrag, dietFrag.javaClass.name)
         transaction.replace(R.id.user_info_frag, userInfoFrag, userInfoFrag.javaClass.name)
         transaction.replace(R.id.blood_pressure_sugar_frag, bloodFrag, bloodFrag.javaClass.name)
         transaction.replace(R.id.weight_frag, weightFrag, weightFrag.javaClass.name)
-        transaction.add(R.id.exercise_frag, exerciseFrag, exerciseFrag.javaClass.name)
+        transaction.replace(R.id.exercise_frag, exerciseFrag, exerciseFrag.javaClass.name)
         transaction.commit()
         return binding.root
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
+
+        viewModel.user.observe(
+            viewLifecycleOwner,
+            {
+                if (it != null) {
+                }
+            }
+        )
 
         binding.apply {
 

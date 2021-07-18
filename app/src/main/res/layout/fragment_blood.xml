@@ -8,8 +8,8 @@
 
     <androidx.constraintlayout.widget.ConstraintLayout
       android:layout_width="match_parent"
-      android:layout_height="330dp"
-      android:layout_marginTop="20dp"
+      android:layout_height="wrap_content"
+      android:paddingBottom="10dp"
       >
 
         <TextView
@@ -247,13 +247,16 @@
           android:layout_height="55dp"
           android:background="@drawable/my_blood_button_background"
           android:padding="15dp"
-          android:elevation="5dp"
+          android:elevation="@dimen/defalut_elevation_size"
           android:layout_marginTop="15dp"
           android:layout_marginLeft="@dimen/default_margin"
           android:layout_marginRight="@dimen/default_margin"
+          android:layout_marginBottom="10dp"
           app:layout_constraintStart_toStartOf="parent"
           app:layout_constraintEnd_toEndOf="parent"
-          app:layout_constraintTop_toBottomOf="@+id/layout_my_blood">
+          app:layout_constraintTop_toBottomOf="@+id/layout_my_blood"
+          app:layout_constraintBottom_toBottomOf="parent"
+          >
 
             <androidx.constraintlayout.widget.Guideline
               android:id="@+id/guideline2"
@@ -285,6 +288,7 @@
                   android:layout_width="wrap_content"
                   android:layout_height="wrap_content"
                   android:src="@drawable/bloodsugar"
+                  app:tint="@color/white"
                   android:layout_marginRight="5dp"/>
 
                 <TextView
@@ -292,7 +296,7 @@
                   android:layout_height="wrap_content"
                   android:text="혈당 기록"
                   android:textSize="@dimen/defalut_font_size"
-                  android:textColor="@color/my_blood_button_text_color"
+                  android:textColor="@color/white"
                   android:fontFamily="@font/spoqa_han_sans_neo_medium"/>
 
             </LinearLayout>
@@ -311,6 +315,7 @@
                   android:layout_width="wrap_content"
                   android:layout_height="wrap_content"
                   android:src="@drawable/bloodpressure"
+                  app:tint="@color/white"
                   android:layout_marginRight="5dp"/>
 
                 <TextView
@@ -318,7 +323,7 @@
                   android:layout_height="wrap_content"
                   android:text="혈압 기록"
                   android:textSize="@dimen/defalut_font_size"
-                  android:textColor="@color/my_blood_button_text_color"
+                  android:textColor="@color/white"
                   android:fontFamily="@font/spoqa_han_sans_neo_medium"/>
 
             </LinearLayout>
