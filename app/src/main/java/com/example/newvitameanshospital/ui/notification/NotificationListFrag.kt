@@ -19,7 +19,7 @@ class NotificationListFrag : Fragment() {
     ): View? {
         binding = FragmentNotificationListBinding.inflate(inflater, container, false)
         return binding.apply {
-            toolbar.setNavigationOnClickListener {
+            appbarLayout.toolbar.setNavigationOnClickListener {
                 findNavController().navigateUp()
             }
         }.root

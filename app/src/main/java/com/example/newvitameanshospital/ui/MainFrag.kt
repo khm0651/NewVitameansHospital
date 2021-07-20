@@ -48,17 +48,17 @@ class MainFrag : Fragment() {
 
         binding.apply {
 
-            appbarLayout.outlineProvider = null
+            appbarLayout.appbar.outlineProvider = null
             svMain.setOnScrollChangeListener { _, _, scrollY, _, _ ->
-                if (scrollY > 0) appbarLayout.outlineProvider = ViewOutlineProvider.BOUNDS
-                else appbarLayout.outlineProvider = null
+                if (scrollY > 0) appbarLayout.appbar.outlineProvider = ViewOutlineProvider.BOUNDS
+                else appbarLayout.appbar.outlineProvider = null
             }
 
-            toolbar.setNavigationOnClickListener {
+            appbarLayout.toolbar.setNavigationOnClickListener {
                 mainDrawerLayout.open()
             }
 
-            toolbar.setOnMenuItemClickListener {
+            appbarLayout.toolbar.setOnMenuItemClickListener {
                 when (it.itemId) {
                     R.id.ic_bell -> {
                         findNavController().navigate(R.id.action_mainFrag_to_notificationListFrag)
