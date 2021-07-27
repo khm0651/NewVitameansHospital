@@ -21,7 +21,7 @@
             android:layout_height="wrap_content"
             android:fontFamily="@font/spoqa_han_sans_neo_medium"
             android:layout_marginLeft="10dp"
-            android:text="이번 주 운동 기록"
+            android:text="이번 주 운동 기록2"
             android:textSize="@dimen/defalut_font_size"
             app:layout_constraintLeft_toLeftOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
